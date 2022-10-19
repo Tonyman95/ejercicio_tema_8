@@ -1,23 +1,58 @@
-# Compiled class file
-*.class
+import java.util.Scanner;
+//Para practicar la encapsulación:
+//
+//Crear clase Persona.
+//
+//Crear variables las privadas edad, nombre y telefono de la clase Persona.
+//
+//Crear gets y sets de cada propiedad.
+//
+//Crear un objeto persona en el main.
+//
+//Utiliza los gets y sets para darle valores a las propiedades edad, nombre y telefono, por último muéstralas por consola.
+public class Main {
+    public static void main(String[] args) {
+        Persona persona = new Persona();
+        System.out.println("edad: " + persona.getEdad());
+        Persona persona1 = new Persona();
+        System.out.println("nombre: " + persona.getNombre());
+        Persona persona2 = new Persona();
+        System.out.println("numero: " + persona.getNumero());
 
-# Log file
-*.log
+    }
+}
 
-# BlueJ files
-*.ctxt
+class Persona {
+    private String edad = "27";
+    private String nombre = "Anthony";
+    private String numero = "945682133";
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+    public void setNumero(String numero){
+        this.numero = numero;
+    }
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+    public String getNumero(){
+        return this.numero;
+    }
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    public String getNombre(){
+        return this.nombre;
+    }
+
+
+    public void setEdad(String edad){
+        this.edad = edad;
+
+    }
+    public String getEdad(){
+        return this.edad;
+    }
+
+
+
+
+
+    }
